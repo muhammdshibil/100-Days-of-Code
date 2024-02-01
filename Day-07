@@ -1,0 +1,15 @@
+team = input("What is your favourite football team? : ")
+if team == "Real Madrid":
+    print("Wow!! Hala Madrid!!")
+    player = input("Who is your favourite player? : ")
+    if player == "Cristiano":
+        print("ooh Man! GOAT.")
+    else:
+        print("oops! you know Cristiano is the GOAT")
+elif team == "Barcelona":
+    print("oops! Madrid is the best")
+    goat = input("Who is your favourite player? : ")
+    if goat == "Cristiano":
+        print("Exactly GOAT")
+    else:
+        print("Oops! Cristiano is the GOAT!")
