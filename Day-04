@@ -1,0 +1,10 @@
+print("""Welcome to the Game simulation
+Tell us about your self
+Let's Dive in!!!""")
+Name = input("Enter your name: ")
+Favorite_football_team = input("What is your favorite football team?: ")
+Your_rival_team = input("What is your rival team?: ")
+Fav_player = input("Who is your favorite player?: ")
+Rival_player = input("Who is your rival player?: ")
+print()
+print("Hello", Name, "You're Favoirte team is", Favorite_football_team, "Yeah Good choice! and your rival team is", Your_rival_team, "and your favorite player is", Fav_player, "and your rival player is", Rival_player, "But everybody knows that", Fav_player, "is better than", Rival_player, "SUUUUUUUUUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
