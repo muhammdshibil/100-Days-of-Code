@@ -1,0 +1,19 @@
+count = 5
+i = 0
+while i < count:
+    print("""Welcome to the login page!
+    Enter the username and password!
+    you only got 5 attempts""")
+    username = input("Enter the Username: ")
+    password = input("Enter the Password: ")
+    if username == "Muhammed" and password == "04April2002":
+        print("welcome MUHAMMED SHIBIL!")
+        break
+    elif username == "Ayisha" and password == "12345678":
+        print("Welcome AYISHA!")
+        break
+    elif username == "Fathima" and password == "1212":
+        print("Welcome FATHIMA!")
+        break
+    else:
+        print("You're not in family!")
