@@ -1,0 +1,9 @@
+# 👉 Day 8 Challenge
+
+name = input("What is your name? ") 
+player = input("Your favorite player? ")
+if player == "Messi" or player == "messi":
+  print("Ha Ha!" , name, " is a Messi fan")
+elif player == "Ronaldo" or player == "ronaldo":
+  print("Suii you got it ", name, " right, GOAT")
+
