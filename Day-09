@@ -1,0 +1,18 @@
+print("Welcome to Generation Generator!")
+print()
+age = int(input("""What's you age? 
+I'll tell you what generation you part of
+type your age: """))
+if age < 1925 and age < 1947:
+  print("Ha you are a Traditionalist")
+elif age >= 1947 and age < 1965:
+  print("Baby boomers")
+elif age >= 1965 and age < 1982:
+  print("Generation X")
+elif age >= 1982 and age < 1996:
+  print("Millenials")
+elif age > 1996:
+  print("Generation Z")
+else:
+  print("Dude Strange!")
+
