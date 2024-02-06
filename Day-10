@@ -1,0 +1,7 @@
+myBill = float(input("What was the bill?: "))
+tip = float(input("what % of tip will leave to be added to the bill total?: "))
+numberOfPeople = int(input("How many people?: "))
+answer = myBill / numberOfPeople
+total_amount = (tip / 100) * answer
+Final_answer = total_amount + answer
+print("You all owe", round(Final_answer, 0))
