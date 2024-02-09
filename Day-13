@@ -1,0 +1,21 @@
+# Day 13 Challenge
+# Grade Generator
+
+test_name = input("Enter the test name: ")
+max_score = int(input("Enter the maximum score: "))
+received_points = int(input("Enter how much you received: "))
+percentage = (received_points / max_score) * 100
+rounded_percentage = round(percentage, 2)
+print("Your Percentage is: ", percentage)
+if percentage >= 90:
+  print("Congratulations! you got 'A+' Grade")
+elif percentage >= 80:
+  print("Congratulations! you got 'A' Grade")
+elif percentage >= 70:
+  print("Congratulations! You got 'B' Grade")
+elif percentage >= 60:
+  print("Congratulations! You got 'C' Grade")
+elif percentage >= 50:
+  print("Congratulations! You got 'D' Grade")
+else:
+  print("Bruh Sorry! you Got 'U' Don't worry try next time")
