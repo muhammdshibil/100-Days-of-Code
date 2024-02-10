@@ -1,0 +1,17 @@
+#Animal sounds generation using While 
+
+while True:
+    animal = input("What animal sound do you want to hear?: ").strip().lower()
+    if animal == "cow":
+        print("A cow goes moo!!")
+    elif animal == "cat":
+        print("A cat goes Meawooo!!")
+    elif animal == "dog":
+        print("A Dog goes Bow Bow Bow!!")
+    else:
+        print(f"Bruh I don't know how {animal} is sounds like")
+
+    exit_statement = input("Do you want to exit (yes/no)").strip().lower()
+    if exit_statement == "Yes":
+        print("Good bye then!")
+        break
