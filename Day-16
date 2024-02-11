@@ -1,0 +1,22 @@
+#👉 Day 16 Challenge
+Create a "Name the Lyrics" game. Write your favorite song lyrics with a word or two missing. The user has to figure out the correct song lyric in as few attempts as possible. Find the true lyric master among you!
+
+count = 0
+while True:
+    print("Fill in the blank lyrics!")
+    print("Type in the lyrics in blank dude!!!!")
+    print("Type 'quit' to exit")
+    print()
+    blank = input("good boy goes to heaven and bad boys goes to_______: ").strip().lower()
+    if blank == "quit":
+        print("Hope you had fun!")
+        print("Exiting the game bye!")
+        break
+    elif blank != "bangkok":
+        print("No Try again")
+        count += 1
+    elif blank == "bangkok":
+        count += 1
+        print(f"Yeah dude you made it!!! in {count} attempt ")
+        break
+
