@@ -1,0 +1,31 @@
+#Rock Paper Scissors Game (Updated version whivh includes while loop and Continue, Break statements)
+# from getpass import getpass
+score_p1 = 0
+score_p2 = 0
+while True:
+  print("Epic Battle Begins!!!")
+  print("Select your move! (R, P or S)")
+  player01 = input("'Player 01' Your move (R, P or S): ").upper()
+  player02 = input("'Player 02' Your move (R, P or S): ").upper()
+
+  if player01 not in ["R", "P", "S"] or player02 not in ["R", "P", "S"]:
+    print("please type 'R' 'S' 'P' ")
+    continue
+
+  if player01 == player02:
+    print("Game ties!")
+
+  elif (player01 == "R" and player02 == "S") or (player01 == "P" and player02 == "R") or (player01 == "S" and player02 == "P"):
+    print("Player 01 wins!!!")
+    score_p1 += 1
+  else:
+    print("Player 02 wins!!!")
+    score_p2 += 1
+
+  if score_p1 == 3:
+    print("Player 01 Won boy!!!")
+    break
+  elif score_p2 == 3:
+    print("Player 02 Won boy!!!")
+    break
+print("Game over")
