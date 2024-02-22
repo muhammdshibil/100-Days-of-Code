@@ -1,0 +1,7 @@
+#increment 
+s = int(input("Enter the number start with: "))
+e = int(input("number to end with: "))
+ev = int(input("Increment bw values: "))
+
+for i in range(s, e+1, ev):
+    print(i)
