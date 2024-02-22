@@ -1,0 +1,10 @@
+# Loan amount calculator with intrest
+
+owe = 1000
+apr = 0.05
+years = 10
+
+for i in range(years):
+    amount = owe * (1 + apr)
+    print("Year", i+1, "owed money:", round(amount))
+    owe = amount
