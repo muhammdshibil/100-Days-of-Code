@@ -1,0 +1,27 @@
+#Number guessing Game! using Random library
+import random
+print("Welcome to the Number guessing game!")
+count = 0
+correct_number = random.randint(1,1000000)
+while True:
+    print("Enter a number from 0 to 1000000")
+    user_ip = int(input("Enter the Number Boy!: "))
+    count += 1
+    if user_ip == correct_number:
+      print(f"Well done Boy! you guessed it in your {count} guess")
+      break
+
+    elif user_ip < correct_number:
+      print("Guess a Higher number boy")
+      print(f"{5 - count} chances are left")
+
+    else:
+      print("Guess Lower Boy!")
+      print(f"{5 - count} chances are left")
+
+    if count >= 5:
+      print("You used your 5 chances Try again")
+      print(f"The number was {correct_number}")
+      break
+
+print("Game over")
