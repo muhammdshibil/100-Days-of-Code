@@ -1,0 +1,15 @@
+#Simple #loginfunction 
+print("WELCOME TO REPLIT SYSTEM")
+def login():
+    User_name = "Muhammed"
+    Password = "Muhammed@123"
+    while True:
+        entered_username = input("User Name: ")
+        entered_password = input("Password: ")
+        if User_name == entered_username and Password == entered_password:
+            print("Welcome User!")
+            break
+        else:
+            print("Wrong User name or password! Try again")
+
+login()
