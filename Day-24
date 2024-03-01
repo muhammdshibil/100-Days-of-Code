@@ -1,0 +1,16 @@
+#using of function calling and stuidied both single and multiarguments in functions
+
+import random
+def roll_dice(sides):    
+    return random.randint(1, sides)
+print("Infinity Dice 🎲")
+
+while True:
+    sides = int(input("How many sides?: "))
+    roll_result = roll_dice(sides)
+    print("You rolled", roll_result)
+
+    play_again = input("Roll again? (y/n): ").lower()
+    if play_again != "y":
+        print("Goodbye!")
+        break
