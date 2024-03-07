@@ -1,0 +1,17 @@
+import random
+
+def roll(size):
+    rollrand = random.randint(1, size)
+    return rollrand
+
+while True:
+    six_sided = roll(6)
+    eight_sided = roll(8)
+    chars_health_stats = six_sided * eight_sided
+    name = input("Name your warrior: ")
+    size = int(input("Size of your die: "))
+    print(f"You rolled {roll(size)}")
+    print(f"your warrior health is {chars_health_stats}")
+    status = input("You want to continue? (y/n)")
+    if status == "n":
+        break
