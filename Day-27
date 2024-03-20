@@ -1,0 +1,56 @@
+# game creation
+import random
+import os
+import time
+
+def generate_character_name():
+    return input("Name Your Legend: ")
+
+def generate_character_type():
+    return input("Character Type (Human, Elf, Wizard, Orc): ")
+
+def generate_sided_roll():
+    return random.randint(1, 6)
+
+def calculate_health(sided_roll):
+    char_health = ((6 - sided_roll) * (12 - sided_roll) / 2) + 10
+    return char_health
+
+def calculate_strength(sided_roll):
+    char_str = ((6 - sided_roll) * (12 - sided_roll) / 2) + 12
+    return char_str
+
+while True:
+    os.system("cls" if os.name == "nt" else "clear")
+    print("Character Builder")
+    print("1. Create a Character")
+    print("2. Quit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        os.system("clear" if os.name == "posix" else "cls")
+        print("Creating Character...")
+        time.sleep(1)
+
+        name = generate_character_name()
+        char_type = generate_character_type()
+        sided_roll = generate_sided_roll()
+
+        os.system("clear" if os.name == "posix" else "cls")
+        print(name + " the " + char_type)
+        print("HEALTH:", calculate_health(sided_roll))
+        print("STRENGTH:", calculate_strength(sided_roll))
+        print("May your name go down in Legend...\n")
+        time.sleep(2)
+
+    elif choice == "2":
+        os.system("clear" if os.name == "posix" else "cls")
+        print("Exiting...")
+        time.sleep(1)
+        break
+
+    else:
+        print("Invalid choice. Please enter 1 or 2.")
+
+print("Thanks for playing!")
