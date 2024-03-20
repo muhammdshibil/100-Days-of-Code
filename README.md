@@ -1,6 +1,7 @@
 # 100-Days-of-Code (#Replit 100 days of code)
-This is the repository of my 100 Days of code challenge,
 Welcome to my 100 Days of Code challenge repository!
+This is the repository of my 100 Days of code challenge,
+
 
 This repository documents my journey of continuous learning and improvement in Python programming and beyond. I'm taking on the challenge on Replit to enhance my efficiency in Python and deepen my understanding of various programming concepts.
 
