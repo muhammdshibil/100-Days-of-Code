@@ -1,0 +1,30 @@
+#music system
+from replit import audio
+import os, time
+
+
+def play():
+    source = audio.play_file('audio.wav')
+    source.paused = False  # unpause the playback
+
+# Clear the screen function
+def clear_screen():
+    os.system('clear' if os.name == 'posix' else 'cls')
+
+while True:
+    clear_screen()
+    print("🎵 MyPOD Music Player")
+    print("Press 1 to Play")
+    print("Press 2 to Exit")
+    print("Press anything else to see the menu again.")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        play()
+        input("Press any key to return to the main menu...")
+    elif choice == '2':
+        print("Goodbye! Thanks for using MyPOD Music Player.")
+        break
+    else:
+        input("Invalid choice! Press any key to continue...")
