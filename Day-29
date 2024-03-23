@@ -1,0 +1,40 @@
+def print_in_color(word, color):
+    if color == "red":
+        print("\033[31m", word, sep="", end="")
+    elif color == "green":
+        print("\033[32m", word, sep="", end="")
+    elif color == "yellow":
+        print("\033[33m", word, sep="", end="")
+    elif color == "blue":
+        print("\033[34m", word, sep="", end="")
+    elif color == "purple":
+        print("\033[35m", word, sep="", end="")
+    elif color == "cyan":
+        print("\033[36m", word, sep="", end="")
+    elif color == "white":
+        print("\033[37m", word, sep="", end="")
+    else:
+        print(word, end="") 
+
+    
+    print("\033[0m", end="")
+
+
+
+print("Super Subroutine")
+print("with my ", end="")
+print_in_color("awesome", "red")
+print(" capabilities!")
+print("I can print in different colors like ", end="")
+print_in_color("green", "green")
+print(", ", end="")
+print_in_color("yellow", "yellow")
+print(", ", end="")
+print_in_color("blue", "blue")
+print(", ", end="")
+print_in_color("purple", "purple")
+print(", ", end="")
+print_in_color("cyan", "cyan")
+print(", and even ", end="")
+print_in_color("white", "white")
+print("!")
