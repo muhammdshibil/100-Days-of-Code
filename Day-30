@@ -1,0 +1,6 @@
+print("Wow! 30 days down!")
+for i in range(1, 30):
+    print(f"Day {i}:".center(50))
+
+    feedback = input().strip()
+    print(f"{' ' * 25}{feedback.capitalize()}")
