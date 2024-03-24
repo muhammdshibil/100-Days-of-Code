@@ -1,0 +1,35 @@
+def colorize(text, color):
+    colors = {
+        "red": "\033[91m",
+        "green": "\033[92m",
+        "yellow": "\033[93m",
+        "blue": "\033[94m",
+        "purple": "\033[95m",
+        "cyan": "\033[96m",
+        "white": "\033[97m",
+        "reset": "\033[0m"
+    }
+    return colors[color] + text + colors["reset"]
+
+# Test the colorize function
+print(colorize("This is red text", "red"))
+# Define variables for the interface
+title = "Welcome to My App"
+text = "This is a simple interface created using string manipulation."
+
+# Print the first interface
+print(colorize(title.center(50), "cyan"))
+print(text.center(50))
+print("-" * 50)
+# Define variables for the interface
+title = "User Profile"
+username = "john_doe"
+age = 30
+email = "john@example.com"
+
+# Print the second interface
+print(colorize(title.center(50), "green"))
+print(f"Username: {username.ljust(40)}")
+print(f"Age: {str(age).ljust(45)}")
+print(f"Email: {email.ljust(43)}")
+print("-" * 50)
