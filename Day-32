@@ -1,0 +1,17 @@
+import random
+greetings = [
+    "Hello there! Welcome!",
+    "¡Hola! ¡Bienvenido!",
+    "Bonjour! Bienvenue!",
+    "Hallo! Willkommen!",
+    "Ciao! Benvenuto!",
+    "Olá! Bem-vindo!",
+    "Привет! Добро пожаловать! (Privet! Dobro pozhalovat'!)",
+    "你好！欢迎！(Nǐ hǎo! Huānyíng!)",
+    "こんにちは！ようこそ！(Konnichiwa! Yōkoso!)",
+    "مرحبا! أهلا بك! (Marhaba! Ahlan bik!)"
+]
+
+random_index = random.randint(0, len(greetings)-1)
+greeting = greetings[random_index]
+print(greeting)
