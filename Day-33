@@ -1,0 +1,36 @@
+import time
+print("To do list!")
+print()
+do_list = []
+
+
+def view_list():
+    if not do_list:
+        print("Your to-do list is empty!")
+    else:
+        print("Your To-Do List:")
+        for index, item in enumerate(do_list, start=1):
+            print(f"{index}. {item}")
+        print()
+
+
+while True:
+    command = input("want to view, add, edit or exit?: ")
+    if command == "view":
+        view_list()
+    elif command == "add":
+        add = input("Enter the item to add: ")
+        do_list.append(add)
+
+    elif command == "edit":
+        edit = input("What item is completed to remove from the list?: ")
+        if edit in do_list:
+            do_list.remove(edit)
+        else:
+            print("Item is not in the list")
+    elif command == "exit":
+        print("Exiting the list! ")
+        break
+    elif command != "view" "add" "edit" "exit":
+        print("Give the correct command")
+    time.sleep(1)
