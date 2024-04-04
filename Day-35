@@ -1,0 +1,44 @@
+# To-do-list
+
+do_list = []
+
+
+def pretty_print():
+    for index, item in enumerate(do_list):
+        print(f"{index + 1}: {item}")
+
+
+print("Welcome to do list manager!")
+while True:
+    command = input(
+        "Do you want to view, add, edit, remove an item from the to do list? or erase the whole list?\n").lower()
+    if command == "view":
+        pretty_print()
+    elif command == "add":
+        command1 = input("What you want to?: ")
+        if command1 in do_list:
+            print("It's already exist in the list! ")
+        else:
+            do_list.append(command1)
+        pretty_print()
+    elif command == "remove":
+        command2 = input("What do you want to remove?: ")
+        command4 = input("Is this the item they really want to remove?\n").lower()
+        if command4 == "yes":
+            do_list.remove(command2)
+        else:
+            command5 = input("Enter the correct item to remove: ")
+            do_list.remove(command5)
+            pretty_print()
+    elif command == "edit":
+        pretty_print()
+        command3 = int(input("what do you want to edit? (type the index number): "))
+        new_item = input("Enter the new item: ")
+        do_list[command3 - 1] = new_item
+        pretty_print()
+    elif command == "erase":
+        do_list.clear()
+        print("List is empty now!")
+        pretty_print()
+    else:
+        print("Sorry wrong command!")
