@@ -1,0 +1,24 @@
+#names list
+
+names = []
+
+
+def pretty_print():
+    print("List of names")
+    for index, item in enumerate(names):
+        print(index+1,"-", item)
+
+
+while True:
+    first_name = input("Enter the first name: ").strip().capitalize()
+    surname = input("Enter the surname: ").strip().capitalize()
+    full_name = first_name + " " + surname
+    if full_name not in names:
+        names.append(full_name)
+    else:
+        print("Name is already there")
+    pretty_print()
+    command = input("Want to add more? (y/n)").lower()
+    if command == "n":
+        print("Exiting...")
+        break
