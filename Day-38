@@ -1,0 +1,35 @@
+#colored sentences by starting letter's color
+def change_color(char, color):
+    if color == 'r':
+        print("\033[31m", end="")
+    elif color == 'b':
+        print("\033[34m", end="")
+    elif color == 'g':
+        print("\033[32m", end="")
+    elif color == 'p':
+        print("\033[35m", end="")
+    elif color == 'y':
+        print("\033[33m", end="")
+    else:
+        print("\033[0m", end="")  # Reset color to default
+
+
+def rainbow(input_Str):
+    color = 'default'
+    for char in input_Str:
+        if char.lower() == "r":
+            color = 'r'
+        elif char in ['b', 'g', 'p', 'y']:
+            color = char
+            change_color(char, color)
+        print(char, end="")
+        if char == ' ':  # Reset color back to default when encountering a space
+            color = 'default'
+            print("\033[0m", end="")
+    print("\033[0m")  # Reset color back to default at the end of the string
+
+
+# Test the function
+input_sentence = input("Enter a sentence: ")
+rainbow(input_sentence)
+
