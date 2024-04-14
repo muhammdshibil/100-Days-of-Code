@@ -1,0 +1,32 @@
+import random
+
+listOfWords = ["british", "suave", "integrity", "accent", "evil", "genius", "Downton"]
+picked = random.choice(listOfWords)
+count = 0
+guessed_letter = []
+print("🌟Hangman🌟")
+while True:
+    user_letter = input("Enter letter: ")
+    if user_letter in guessed_letter:
+        print("You already guessed the letter! Try a different one")
+        continue
+    guessed_letter.append(user_letter)
+    if user_letter in picked:
+        print("Correct! the letter is in the word")
+        final = ""
+        for char in picked:
+            if char in guessed_letter:
+                final += char
+            else:
+                final += "_"
+        print("The word so far", final)
+        if "_" not in final:
+            print("Congratulations! You've won!")
+            break
+    else:
+        print("Letter is not in the word")
+        count += 1
+        print("Attempts left", 6 - count)
+        if count >= 6:
+            print("Your attempts are finished and the correct word was", picked)
+            break
