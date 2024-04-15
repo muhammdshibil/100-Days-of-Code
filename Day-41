@@ -1,0 +1,20 @@
+print("Website Details:")
+print()
+# website_name, URL, description, star_rating = (
+#     input("Website Name: "),
+#     input("URL: "),
+#     input("Description: "),
+#     input("Star rating")
+#
+# )
+details = {
+    "Website name": None,
+    "URL": None,
+    "Description": None,
+    "Star rating": None
+}
+for key in details:
+    details[key] = input(f"Enter the {key}: ")
+
+for name, value in details.items():
+    print(f"{name}: {value}")
