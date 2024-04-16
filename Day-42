@@ -1,0 +1,41 @@
+name = input("Input your beast's name: ")
+type_of = input("Input your beast's type: ").lower()
+special_move = input("Input your beast's special move: ")
+starting_HP = int(input("Input your beast's staring HP: "))  # Convert to integer
+starting_MP = int(input("Input your beast's staring MP: "))  # Convert to integer.
+
+details = {
+    'Name': name,
+    'Type of the Beast': type_of,
+    'Special Move': special_move,
+    'Starting HP': starting_HP,
+    'Starting MP': starting_MP,
+}
+
+
+def pretty_printing():
+    for item, value in details.items():
+        if item == 'Type of the Beast':
+            if value.lower() == "fire":
+                print(f"{item}: \033[31m{value}\033[0m")  # Red color for fire
+            elif value.lower() == "water":
+                print(f"{item}: \033[34m{value}\033[0m")  # Blue color for water
+            elif value.lower() == "light":
+                print(f"{item}: \033[37m{value}\033[0m")  # White color for light
+            else:
+                print(f"{item}: {value}")  # Default color for other types
+        else:
+            print(f"{item}: {value}")
+
+
+print()
+print("👾 MokéBeast - The Non-Copyright Generic Beast Battle Game 👾")
+print("Beast Details!")
+pretty_printing()
+
+
+print()
+print("👾 MokéBeast - The Non-Copyright Generic Beast Battle Game 👾")
+print("Beast Details!")
+pretty_printing()
+
